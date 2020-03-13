@@ -8,6 +8,7 @@ namespace MvcClient
 {
     public class Startup
     {
+		// BENDEKI PROJENIN START UP U
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
