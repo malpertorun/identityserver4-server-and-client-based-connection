@@ -16,11 +16,14 @@ namespace IdentityServer
 
             var builder = services.AddIdentityServer()      //BU BÖLÜM SİZİN STARTUP CLASS INIZIN BANA GÖRE YAPILANDIRILMASI OLACAK;
                 .AddInMemoryIdentityResources(Config.Ids)  // CONFİG CLASSI REFERANS OLARAK EKLENİYOR
-                .AddInMemoryApiResources(Config.Apis)
+                .AddInMemoryApiResources(Config.Apis)  		// CONFIG SINIFINI BIR ÖNCEKI SAYFADA BULABİLİRSİNİZ.
                 .AddInMemoryClients(Config.Clients)
-                .AddTestUsers(TestUsers.Users);  // TÜM BİLGİLER EŞLEŞİYOR İSE, LOGİN SAYFAMA YÖNLENDİRİYOR  
-													//BENİ VE BURDA BULUNANAN TEST USERLER ile GİRİŞ SAĞLIYORUM.		
-                                                   //SIZIN EKLEYECEĞİNİZ DATABASE İLE ALAKALI ŞEYLER BURDA EKLENMESİ GEREKEBİLİR.
+                .AddTestUsers(TestUsers.Users); 
+				// TÜM BİLGİLER EŞLEŞİYOR İSE, LOGİN SAYFAMA YÖNLENDİRİYOR  
+				
+						//BENİ VE BURDA BULUNANAN TEST USERLER ile GİRİŞ SAĞLIYORUM.		
+						          //SIZIN EKLEYECEĞİNİZ DATABASE İLE ALAKALI ŞEYLER BURDA EKLENMESİ GEREKEBİLİR.
+                                         
             builder.AddDeveloperSigningCredential();
 
             services.AddAuthentication()

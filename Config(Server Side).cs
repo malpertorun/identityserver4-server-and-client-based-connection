@@ -39,7 +39,7 @@ namespace IdentityServer
                     RedirectUris = { "http://gts.lojistork.com/signin-oidc" },   // Oidc kütüphanesinden  karmaşık bir adres satırı üretiyor.
 
                    // Logout işleminden sonra                               
-                    PostLogoutRedirectUris = { "http://gts.lojistork.com/Account/Login" },
+                    PostLogoutRedirectUris = { "http://gts.lojistork.com/signout-callback-oidc" },
 
                     AllowedScopes = new List<string>
                     {
