@@ -19,18 +19,12 @@ namespace IdentityServer
                 .AddInMemoryApiResources(Config.Apis)
                 .AddInMemoryClients(Config.Clients)
                 .AddTestUsers(TestUsers.Users);  // TÜM BİLGİLER EŞLEŞİYOR İSE, LOGİN SAYFAMA YÖNLENDİRİYOR  
-															//BENİ VE BURDA BULUNANAN TEST USERLER ile GİRİŞ SAĞLIYORUM.
-                                                       //     SIZIN EKLEYECEĞİNİZ DATABASE İLE ALAKALI MUHTEMEL ŞEYLER OLABİLİR BURADA
+													//BENİ VE BURDA BULUNANAN TEST USERLER ile GİRİŞ SAĞLIYORUM.		
+                                                   //SIZIN EKLEYECEĞİNİZ DATABASE İLE ALAKALI ŞEYLER BURDA EKLENMESİ GEREKEBİLİR.
             builder.AddDeveloperSigningCredential();
 
             services.AddAuthentication()
-                .AddGoogle("Google", options =>
-                {
-                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-
-                    options.ClientId = "ID";
-                    options.ClientSecret = "SECRET";
-                })
+                
                 .AddOpenIdConnect("oidc", "Demo IdentityServer", options =>
 
                 {
