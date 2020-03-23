@@ -28,18 +28,18 @@ namespace IdentityServer
                
                 new Client
                 {
-                    ClientId = "G T S",
-                    ClientSecrets = { new Secret("VE SECRET DEGERI".Sha256()) },
+                    ClientId = "",
+                    ClientSecrets = { new Secret("SECRET DEGERI".Sha256()) },
 
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireConsent = false,
                     RequirePkce = true,
                 
                   // Login işleminden sonra aktarılacak 
-                    RedirectUris = { "http://gts.lojistork.com/signin-oidc" },   // Oidc kütüphanesinden  karmaşık bir adres satırı üretiyor.
+                    RedirectUris = { "" },   // Oidc kütüphanesinden  karmaşık bir adres satırı üretiyor.
 
                    // Logout işleminden sonra                               
-                    PostLogoutRedirectUris = { "http://gts.lojistork.com/signout-callback-oidc" },
+                    PostLogoutRedirectUris = { "" },
 
                     AllowedScopes = new List<string>
                     {

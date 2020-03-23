@@ -26,8 +26,8 @@ namespace MvcClient
                     options.Authority = "BENIM AZUREWEBSITES LINKIM";
                     options.RequireHttpsMetadata = false;
 
-                    options.ClientId = "G T S";
-                    options.ClientSecret = "secret";
+                    options.ClientId = "";
+                    options.ClientSecret = "";
                     options.ResponseType = "code";  
 
                     options.SaveTokens = true;
